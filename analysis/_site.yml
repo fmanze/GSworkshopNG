@@ -5,8 +5,10 @@ navbar:
   left:
   - text: Home
     href: index.html
-  - text: About
-    href: about.html
+  - text: Download
+    href: download.html
+  - text: Clean phenos
+    href: clean_phenos.html
   - text: License
     href: license.html
 output:
