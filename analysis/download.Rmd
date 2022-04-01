@@ -1,6 +1,6 @@
 ---
 title: "download"
-author: "fmanze"
+author: "Francis Manze"
 date: "2022-03-25"
 output: workflowr::wflow_html
 editor_options:

@@ -9,7 +9,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 
-<meta name="author" content="fmanze" />
+<meta name="author" content="Francis Manze" />
 
 <meta name="date" content="2022-03-25" />
 
@@ -337,7 +337,10 @@ div.tocify {
   <a href="index.html">Home</a>
 </li>
 <li>
-  <a href="about.html">About</a>
+  <a href="download.html">Download</a>
+</li>
+<li>
+  <a href="clean_phenos.html">Clean phenos</a>
 </li>
 <li>
   <a href="license.html">License</a>
@@ -355,7 +358,7 @@ div.tocify {
 
 
 <h1 class="title toc-ignore">download</h1>
-<h4 class="author">fmanze</h4>
+<h4 class="author">Francis Manze</h4>
 <h4 class="date">2022-03-25</h4>
 
 </div>
@@ -385,7 +388,7 @@ aria-hidden="true"></span> </a>
 <div class="tab-content">
 <div id="summary" class="tab-pane fade in active">
 <p>
-<strong>Last updated:</strong> 2022-03-25
+<strong>Last updated:</strong> 2022-04-01
 </p>
 <p>
 <strong>Checks:</strong> <span
@@ -423,10 +426,10 @@ changes </a>
 <div id="strongRMarkdownfilestronguncommittedchanges"
 class="panel-collapse collapse">
 <div class="panel-body">
-<p>The R Markdown is untracked by Git. To know which version of the R
-Markdown file created these results, you’ll want to first commit it to
-the Git repo. If you’re still working on the analysis, you can ignore
-this warning. When you’re finished, you can run
+<p>The R Markdown file has unstaged changes. To know which version of
+the R Markdown file created these results, you’ll want to first commit
+it to the Git repo. If you’re still working on the analysis, you can
+ignore this warning. When you’re finished, you can run
 <code>wflow_publish</code> to commit the R Markdown file and build the
 HTML.</p>
 </div>
@@ -519,15 +522,15 @@ project makes it easier to run your code on other machines.</p>
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomfmanzeGSworkshopNGtreeb5d80e3d2c68f6e6ba5e955bb3a003ac26206e1btargetblankb5d80e3a">
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomfmanzeGSworkshopNGtreea93be56998bf79af8e1e070ab039c3f41e0acc93targetblanka93be56a">
 <span class="glyphicon glyphicon-ok text-success"
 aria-hidden="true"></span> <strong>Repository version:</strong>
-<a href="https://github.com/fmanze/GSworkshopNG/tree/b5d80e3d2c68f6e6ba5e955bb3a003ac26206e1b" target="_blank">b5d80e3</a>
+<a href="https://github.com/fmanze/GSworkshopNG/tree/a93be56998bf79af8e1e070ab039c3f41e0acc93" target="_blank">a93be56</a>
 </a>
 </p>
 </div>
 <div
-id="strongRepositoryversionstrongahrefhttpsgithubcomfmanzeGSworkshopNGtreeb5d80e3d2c68f6e6ba5e955bb3a003ac26206e1btargetblankb5d80e3a"
+id="strongRepositoryversionstrongahrefhttpsgithubcomfmanzeGSworkshopNGtreea93be56998bf79af8e1e070ab039c3f41e0acc93targetblanka93be56a"
 class="panel-collapse collapse">
 <div class="panel-body">
 <p>
@@ -537,7 +540,7 @@ reproducibility.
 </p>
 <p>
 The results in this page were generated with repository version
-<a href="https://github.com/fmanze/GSworkshopNG/tree/b5d80e3d2c68f6e6ba5e955bb3a003ac26206e1b" target="_blank">b5d80e3</a>.
+<a href="https://github.com/fmanze/GSworkshopNG/tree/a93be56998bf79af8e1e070ab039c3f41e0acc93" target="_blank">a93be56</a>.
 See the <em>Past versions</em> tab to see a history of the changes made
 to the R Markdown and HTML files.
 </p>
@@ -552,12 +555,23 @@ were generated:
 </p>
 <pre><code>
 Ignored files:
+    Ignored:    .Rhistory
     Ignored:    .Rproj.user/
 
 Untracked files:
-    Untracked:  analysis/download.Rmd
+    Untracked:  data/BreedBaseGenotypesDownload.tsv
+    Untracked:  data/BreedBaseGenotypesDownload.vcf
+    Untracked:  data/metadata.csv
+    Untracked:  data/phenotype.csv
+    Untracked:  output/phenotypes_cleaned.rds
 
 Unstaged changes:
+    Modified:   analysis/clean_phenos.Rmd
+    Modified:   analysis/download.Rmd
+    Modified:   analysis/index.Rmd
+
+Staged changes:
+    New:        analysis/clean_phenos.Rmd
     Modified:   analysis/index.Rmd
 
 </code></pre>
@@ -573,10 +587,74 @@ have uncommitted changes.
 <hr>
 </div>
 <div id="versions" class="tab-pane fade">
+
 <p>
-There are no past versions. Publish this analysis with
-<code>wflow_publish()</code> to start tracking its development.
+These are the previous versions of the repository in which changes were
+made to the R Markdown (<code>analysis/download.Rmd</code>) and HTML
+(<code>docs/download.html</code>) files. If you’ve configured a remote
+Git repository (see <code>?wflow_git_remote</code>), click on the
+hyperlinks in the table below to view the files as they were in that
+past version.
 </p>
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+File
+</th>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+<th>
+Message
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+Rmd
+</td>
+<td>
+<a href="https://github.com/fmanze/GSworkshopNG/blob/277b854efccce61138a21414822f3a728f56a556/analysis/download.Rmd" target="_blank">277b854</a>
+</td>
+<td>
+fmanze
+</td>
+<td>
+2022-03-25
+</td>
+<td>
+First commit with download
+</td>
+</tr>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/fmanze/GSworkshopNG/277b854efccce61138a21414822f3a728f56a556/docs/download.html" target="_blank">277b854</a>
+</td>
+<td>
+fmanze
+</td>
+<td>
+2022-03-25
+</td>
+<td>
+First commit with download
+</td>
+</tr>
+</tbody>
+</table>
+</div>
 <hr>
 </div>
 </div>
@@ -621,16 +699,16 @@ attached base packages:
 [1] stats     graphics  grDevices utils     datasets  methods   base     
 
 loaded via a namespace (and not attached):
- [1] Rcpp_1.0.8       rstudioapi_0.13  knitr_1.37       magrittr_2.0.2  
- [5] workflowr_1.7.0  R6_2.5.1         rlang_1.0.2      fastmap_1.1.0   
- [9] fansi_1.0.2      stringr_1.4.0    tools_4.1.3      xfun_0.30       
-[13] utf8_1.2.2       cli_3.2.0        git2r_0.30.1     jquerylib_0.1.4 
-[17] htmltools_0.5.2  ellipsis_0.3.2   rprojroot_2.0.2  yaml_2.3.5      
-[21] digest_0.6.29    tibble_3.1.6     lifecycle_1.0.1  crayon_1.5.0    
-[25] later_1.3.0      sass_0.4.0       vctrs_0.3.8      promises_1.2.0.1
-[29] fs_1.5.2         glue_1.6.2       evaluate_0.15    rmarkdown_2.13  
-[33] stringi_1.7.6    bslib_0.3.1      compiler_4.1.3   pillar_1.7.0    
-[37] jsonlite_1.8.0   httpuv_1.6.5     pkgconfig_2.0.3 </code></pre>
+ [1] Rcpp_1.0.8       rstudioapi_0.13  whisker_0.4      knitr_1.37      
+ [5] magrittr_2.0.2   workflowr_1.7.0  R6_2.5.1         rlang_1.0.2     
+ [9] fastmap_1.1.0    fansi_1.0.2      stringr_1.4.0    tools_4.1.3     
+[13] xfun_0.30        utf8_1.2.2       cli_3.2.0        git2r_0.30.1    
+[17] jquerylib_0.1.4  htmltools_0.5.2  ellipsis_0.3.2   rprojroot_2.0.2 
+[21] yaml_2.3.5       digest_0.6.29    tibble_3.1.6     lifecycle_1.0.1 
+[25] crayon_1.5.0     later_1.3.0      sass_0.4.0       vctrs_0.3.8     
+[29] promises_1.2.0.1 fs_1.5.2         glue_1.6.2       evaluate_0.15   
+[33] rmarkdown_2.13   stringi_1.7.6    bslib_0.3.1      compiler_4.1.3  
+[37] pillar_1.7.0     jsonlite_1.8.0   httpuv_1.6.5     pkgconfig_2.0.3 </code></pre>
 </div>
 </div>
 
